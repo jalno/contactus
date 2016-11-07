@@ -31,4 +31,10 @@ class letter extends dbObject{
 	protected $relations = array(
 		'reply' => array('hasOne', 'packages\\contactus\\letter\\reply', 'reply')
 	);
+	public function delete(){
+		if($this->reply){
+			$this->reply->delete();
+		}
+		parent::delete();
+	}
 }
