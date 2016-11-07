@@ -26,6 +26,18 @@
 		{
 			"classes":["authorization"],
 			"file":"libraries/users/authorization.php"
+		},
+		{
+			"classes":["controllers\\panel\\homepage"],
+			"file":"controllers/panel.php"
+		},
+		{
+			"classes":["contact_letter"],
+			"file":"libraries/contact.letters.php"
+		},
+		{
+			"classes":["views\\panel\\listview"],
+			"file":"views/panel/list.php"
 		}
 	]
 }

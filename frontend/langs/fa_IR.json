@@ -1,0 +1,18 @@
+{
+	"author": {
+		"name" : "Abedi",
+		"website" : "http://www.software-iaun.ir/"
+	},
+	"rtl": true,
+	"phrases":{
+		"contactus":"تماس با ما",
+		"letter.createdate":"زمان ارسال",
+		"letter.name":"نام",
+		"letter.email":"ایمیل",
+		"letter.subject":"موضوع",
+		"letter.status":"وضعیت",
+		"contact_letter.read":"خوانده شده",
+		"contact_letter.unread":"خوانده نشده",
+		"contact_letter.answered":"پاسخ داده شده"
+	}
+}

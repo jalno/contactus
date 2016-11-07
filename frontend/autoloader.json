@@ -1,0 +1,8 @@
+{
+	"files":[
+		{
+			"classes":["views\\contactus\\panel\\listview"],
+			"file":"views/panel/list.php"
+		}
+	]
+}

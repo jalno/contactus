@@ -1,3 +1,7 @@
-{
-	
-}
+[
+	{
+		"path": ["userpanel", "contactus"],
+		"controller": "controllers\\panel\\homepage@index",
+		"method": "get"
+	}
+]
