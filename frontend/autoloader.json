@@ -7,6 +7,10 @@
 		{
 			"classes":["views\\contactus\\panel\\delete"],
 			"file":"views/panel/delete.php"
+		},
+		{
+			"classes":["views\\contactus\\panel\\view"],
+			"file":"views/panel/view.php"
 		}
 	]
 }

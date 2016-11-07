@@ -5,7 +5,7 @@ use \packages\financial\transaction;
 use \packages\base\translator;
 use \themes\clipone\utility;
 
-use \packages\contactus\contact_letter;
+use \packages\contactus\letter;
 $this->the_header();
 ?>
 <!-- start: PAGE CONTENT -->
@@ -13,7 +13,7 @@ $this->the_header();
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<i class="fa fa-external-link-square"></i>لیست حساب ها
+				<i class="fa fa-external-link-square"></i> <?php echo translator::trans("contactus"); ?>
 				<div class="panel-tools">
 					<a class="btn btn-xs btn-link panel-collapse collapses" href="#"></a>
 				</div>
@@ -40,19 +40,19 @@ $this->the_header();
 								$this->setButtonParam('view', 'link', userpanel\url("contactus/view/".$letter->id));
 								$this->setButtonParam('delete', 'link', userpanel\url("contactus/delete/".$letter->id));
 								$statusClass = utility::switchcase($letter->status, array(
-									'label label label-info' => contact_letter::read,
-									'label label-default' => contact_letter::unread,
-									'label label-success' => contact_letter::answered
+									'label label label-info' => letter::read,
+									'label label-default' => letter::unread,
+									'label label-success' => letter::answered
 								));
 								$statusTxt = utility::switchcase($letter->status, array(
-									'contact_letter.read' => contact_letter::read,
-									'contact_letter.unread' => contact_letter::unread,
-									'contact_letter.answered' => contact_letter::answered
+									'letter.read' => letter::read,
+									'letter.unread' => letter::unread,
+									'letter.answered' => letter::answered
 								));
 							?>
 							<tr>
 								<td class="center"><?php echo $letter->id; ?></td>
-								<td><?php echo date::format('Y/m/d H:i', $letter->date); ?></td>
+								<td class="ltr"><?php echo date::format('Y/m/d H:i', $letter->date); ?></td>
 								<td><?php echo $letter->name; ?></td>
 								<td><?php echo $letter->email; ?></td>
 								<td><?php echo $letter->subject; ?></td>

@@ -11,9 +11,16 @@
 		"letter.email":"ایمیل",
 		"letter.subject":"موضوع",
 		"letter.status":"وضعیت",
-		"contact_letter.read":"خوانده شده",
-		"contact_letter.unread":"خوانده نشده",
-		"contact_letter.answered":"پاسخ داده شده",
-		"letter.delete.warning": "آیا از حذف پیام ارسال شده به شناسه #{letter_id} اطمینان دارید؟ این عملیات بدون بازگشت است"
+		"letter.read":"خوانده شده",
+		"letter.unread":"خوانده نشده",
+		"letter.answered":"پاسخ داده شده",
+		"letter.delete.warning": "آیا از حذف پیام ارسال شده به شناسه #{letter_id} اطمینان دارید؟ این عملیات بدون بازگشت است",
+		"letter.subject.reply": "در پاسخ به پیام '{letter_subject}' ارسال شده در کیاوا",
+		"just.now":"همین الان",
+		"lastSec":" ثانیه پیش",
+		"lastMin":" دقیقه پیش",
+		"lastHov":" ساعت پیش",
+		"lastDay":" روز پیش",
+		"lastYear":" سال پیش"
 	}
 }

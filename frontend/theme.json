@@ -22,6 +22,11 @@
 			"name":"\\themes\\clipone\\views\\contactus\\panel\\delete",
 			"parent":"\\packages\\contactus\\views\\panel\\delete",
 			"file":"contactus.letters.delete.php"
+		},
+		{
+			"name":"\\themes\\clipone\\views\\contactus\\panel\\view",
+			"parent":"\\packages\\contactus\\views\\panel\\view",
+			"file":"contactus.letters.view.php"
 		}
 	]
 }

@@ -7,5 +7,9 @@
 	{
 		"path": ["userpanel", "contactus", "delete", {"type":"dynamic", "name":"id", "regex":"/^(\\d+)$/"}],
 		"controller": "controllers\\panel\\homepage@delete"
+	},
+	{
+		"path": ["userpanel", "contactus", "view", {"type":"dynamic", "name":"id", "regex":"/^(\\d+)$/"}],
+		"controller": "controllers\\panel\\homepage@view"
 	}
 ]

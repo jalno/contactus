@@ -3,13 +3,14 @@ namespace packages\contactus;
 use \packages\base\db;
 use \packages\base\db\dbObject;
 
-class contact_letter extends dbObject{
+class letter extends dbObject{
 	const unread = 1;
 	const read = 2;
 	const answered = 3;
 	protected $dbTable = "contactus_letter";
 	protected $primaryKey = "id";
 	protected $dbFields = array(
+		'reply' => array('type' => 'int'),
 		'date' => array('type' => 'int', 'required' => true),
         'ip' => array('type' => 'text', 'required' => true),
         'name' => array('type' => 'text', 'required' => true),
@@ -26,6 +27,8 @@ class contact_letter extends dbObject{
 			$data['status'] = self::unread;
 		}
 		return $data;
-
 	}
+	protected $relations = array(
+		'reply' => array('hasOne', 'packages\\contactus\\letter\\reply', 'reply')
+	);
 }

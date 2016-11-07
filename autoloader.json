@@ -32,8 +32,12 @@
 			"file":"controllers/panel.php"
 		},
 		{
-			"classes":["contact_letter"],
+			"classes":["letter"],
 			"file":"libraries/contact.letters.php"
+		},
+		{
+			"classes":["letter\\reply"],
+			"file":"libraries/contact.letters.reply.php"
 		},
 		{
 			"classes":["views\\panel\\listview"],
@@ -42,6 +46,10 @@
 		{
 			"classes":["views\\panel\\delete"],
 			"file":"views/panel/delete.php"
+		},
+		{
+			"classes":["views\\panel\\view"],
+			"file":"views/panel/view.php"
 		}
 	]
 }
