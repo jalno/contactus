@@ -28,9 +28,12 @@ class homepage extends controller{
 	public function index(){
 		authorization::haveOrFail('list');
 		$view = view::byName("\\packages\\contactus\\views\\panel\\listview");
-		$letters = new letter();
-		$letters->orderBy('date', 'DESC');
-		$view->setLetters($letters->get());
+		$letter = new letter();
+		$letter->orderBy('date', 'DESC');
+		$letter->pageLimit = $this->items_per_page;
+		$letters = $letter->paginate($this->page);
+		$view->setDataList($letters);
+		$view->setPaginate($this->page, $letter->totalCount, $this->items_per_page);
 		$this->response->setView($view);
 		return $this->response;
 	}

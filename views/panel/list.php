@@ -1,22 +1,18 @@
 <?php
 namespace packages\contactus\views\panel;
-use \packages\contactus\view;
+use \packages\contactus\views\listview as list_view;
 use \packages\contactus\authorization;
-class listview extends view{
+class listview extends list_view{
 	protected $canView;
 	protected $canDel;
-	protected $contactletters;
 	static protected $navigation;
 	function __construct(){
 		$this->canView = authorization::is_accessed('view');
 		$this->canDel = authorization::is_accessed('delete');
 	}
 
-	public function setLetters($letters){
-		$this->contactletters = $letters;
-	}
 	public function getLetters(){
-		return $this->contactletters;
+		return $this->dataList;
 	}
 
 	public static function onSourceLoad(){
