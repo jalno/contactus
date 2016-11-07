@@ -3,5 +3,9 @@
 		"path": ["userpanel", "contactus"],
 		"controller": "controllers\\panel\\homepage@index",
 		"method": "get"
+	},
+	{
+		"path": ["userpanel", "contactus", "delete", {"type":"dynamic", "name":"id", "regex":"/^(\\d+)$/"}],
+		"controller": "controllers\\panel\\homepage@delete"
 	}
 ]

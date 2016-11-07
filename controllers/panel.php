@@ -30,4 +30,27 @@ class homepage extends controller{
 		$this->response->setView($view);
 		return $this->response;
 	}
+	public function delete($data){
+		authorization::haveOrFail('delete');
+		$view = view::byName("\\packages\\contactus\\views\\panel\\delete");
+		$letter = contact_letter::byId($data['id']);
+		if(!$letter){
+			throw new NotFound;
+		}
+		$view->setLetter($letter);
+		$this->response->setStatus(false);
+		if(http::is_post()){
+			try{
+				$letter->delete();
+				$this->response->setStatus(true);
+				$this->response->Go(userpanel\url("contactus"));
+			}catch(inputValidation $error){
+				$view->setFormError(FormError::fromException($error));
+			}
+		}else{
+			$this->response->setStatus(true);
+		}
+		$this->response->setView($view);
+		return $this->response;
+	}
 }

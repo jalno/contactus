@@ -37,8 +37,8 @@ $this->the_header();
 						</thead>
 						<tbody>
 							<?php foreach($this->getLetters() as $letter){
-								$this->setButtonParam('view', 'link', userpanel\url("settings/bankaccounts/view/".$letter->id));
-								$this->setButtonParam('delete', 'link', userpanel\url("settings/bankaccounts/delete/".$letter->id));
+								$this->setButtonParam('view', 'link', userpanel\url("contactus/view/".$letter->id));
+								$this->setButtonParam('delete', 'link', userpanel\url("contactus/delete/".$letter->id));
 								$statusClass = utility::switchcase($letter->status, array(
 									'label label label-info' => contact_letter::read,
 									'label label-default' => contact_letter::unread,

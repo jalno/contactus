@@ -13,6 +13,7 @@
 		"letter.status":"وضعیت",
 		"contact_letter.read":"خوانده شده",
 		"contact_letter.unread":"خوانده نشده",
-		"contact_letter.answered":"پاسخ داده شده"
+		"contact_letter.answered":"پاسخ داده شده",
+		"letter.delete.warning": "آیا از حذف پیام ارسال شده به شناسه #{letter_id} اطمینان دارید؟ این عملیات بدون بازگشت است"
 	}
 }
