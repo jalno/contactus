@@ -89,11 +89,15 @@ class homepage extends controller{
 				if(!$inputs['email']){
 					throw new inputValidation("email");
 				}
+				$user = user::byId(authentication::getID());
+				$fullname = $user->name." ".$user->lastname;
+				//echo($inputs['email']->address);
+										//$sender_user, $subject, $message, $Addresses, $user = null, $From = null, $HTML = true, $Char='UTF-8'
+				$result = EMAIL::send($user->id, $inputs['subject'], nl2br($inputs['text']), $letter->email, $fullname, $inputs['email']->address);
 
-				$result = EMAIL::send(authentication::getID(), $inputs['subject'], $inputs['text'], $letter->email, null, $inputs['email']->address);
-
+				exit();
 				$reply = new reply;
-				$reply->sender = authentication::getID();
+				$reply->sender = $user->id;
 				$reply->email = $inputs['email']->id;
 				$reply->text = $inputs['text'];
 				$reply->save();
