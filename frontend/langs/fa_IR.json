@@ -15,7 +15,7 @@
 		"letter.unread":"خوانده نشده",
 		"letter.answered":"پاسخ داده شده",
 		"letter.delete.warning": "آیا از حذف پیام ارسال شده به شناسه #{letter_id} اطمینان دارید؟ این عملیات بدون بازگشت است",
-		"letter.subject.reply": "در پاسخ به پیام '{letter_subject}' ارسال شده در کیاوا",
+		"letter.subject.reply": "پاسخ: {letter_subject}",
 		"just.now":"همین الان",
 		"lastSec":" ثانیه پیش",
 		"lastMin":" دقیقه پیش",

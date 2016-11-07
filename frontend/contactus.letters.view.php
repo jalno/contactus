@@ -50,9 +50,9 @@ $this->the_header();
 						<img class="img-polaroid" src="<?php echo(theme::url('assets/images/user.png')) ?>" height="60" width="60" alt="client">
 					</div>
 					<div class="comment-wraper text">
-						<h5 class="h-comment m-right-1"><?php echo $reply->sender->name." ".$reply->sender->lastname; ?></h5>
+						<a href="<?php echo userpanel\url("users/view/".$reply->sender->id) ?>"><h5 class="h-comment m-right-1"><?php echo $reply->sender->name." ".$reply->sender->lastname; ?></h5></a>
 						<div class="space black m-right-1">
-							<?php echo $reply->text; ?>
+							<?php echo nl2br($reply->text); ?>
 						</div>
 						<div class="panel-heading">
 							<i class="fa fa-clock-o"></i>
