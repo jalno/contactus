@@ -21,6 +21,9 @@
 		"lastMin":" دقیقه پیش",
 		"lastHov":" ساعت پیش",
 		"lastDay":" روز پیش",
-		"lastYear":" سال پیش"
+		"lastYear":" سال پیش",
+		"usertype.permissions.contactus_list":"لیست پیام های تماس با ما",
+		"usertype.permissions.contactus_view":"مشاهده پیام های تماس با ما",
+		"usertype.permissions.contactus_delete":"حذف پیام های تماس با ما"
 	}
 }
