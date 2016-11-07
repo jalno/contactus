@@ -27,10 +27,10 @@ $this->the_header();
 						<thead>
 							<tr>
 								<th class="center">#</th>
-								<th><?php echo translator::trans("letter.createdate"); ?></th>
+								<th><?php echo translator::trans("letter.subject"); ?></th>
 								<th><?php echo translator::trans("letter.name"); ?></th>
 								<th><?php echo translator::trans("letter.email"); ?></th>
-								<th><?php echo translator::trans("letter.subject"); ?></th>
+								<th><?php echo translator::trans("letter.createdate"); ?></th>
 								<th><?php echo translator::trans("letter.status"); ?></th>
 								<?php if($hasButtons){ ?><th></th><?php } ?>
 							</tr>
@@ -52,10 +52,10 @@ $this->the_header();
 							?>
 							<tr>
 								<td class="center"><?php echo $letter->id; ?></td>
-								<td class="ltr"><?php echo date::format('Y/m/d H:i', $letter->date); ?></td>
+								<td><?php echo $letter->subject; ?></td>
 								<td><?php echo $letter->name; ?></td>
 								<td><?php echo $letter->email; ?></td>
-								<td><?php echo $letter->subject; ?></td>
+								<td class="ltr"><?php echo date::format('Y/m/d H:i', $letter->date); ?></td>
 								<td class="hidden-xs"><span class="<?php echo $statusClass; ?>"><?php echo translator::trans($statusTxt); ?></span></td>
 								<?php
 								if($hasButtons){
@@ -68,6 +68,7 @@ $this->the_header();
 						</tbody>
 					</table>
 				</div>
+				<?php $this->paginator(); ?>
 			</div>
 		</div>
 		<!-- end: BASIC TABLE PANEL -->
