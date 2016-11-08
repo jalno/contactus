@@ -98,8 +98,6 @@ class homepage extends controller{
 				$reply_text = str_replace("%SUBJECT%", $inputs['subject'], $reply_text);
 				$reply_text = str_replace("%TEXT%", nl2br($inputs['text']), $reply_text);
 				$reply_text = str_replace("%signing%", options::get("siging.email"), $reply_text);
-				echo($reply_text);
-				exit();
 				$user = user::byId(authentication::getID());
 				$fullname = $user->name." ".$user->lastname;
 				$result = EMAIL::send($user->id, $inputs['subject'], $reply_text, $letter->email, $fullname, $inputs['email']->address);
