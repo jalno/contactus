@@ -2,11 +2,12 @@
 namespace packages\contactus\controllers\panel;
 use \packages\base;
 use \packages\base\http;
-use \packages\base\frontend\theme;
+use \packages\base\options;
+use \packages\base\packages;
 use \packages\base\NotFound;
+use \packages\base\frontend\theme;
 use \packages\base\inputValidation;
 use \packages\base\views\FormError;
-use \packages\base\packages;
 
 use \packages\userpanel;
 use \packages\userpanel\user;
@@ -92,9 +93,16 @@ class homepage extends controller{
 				if(!$inputs['email']){
 					throw new inputValidation("email");
 				}
+				$reply_text = file_get_contents(__DIR__.'/../storage/private/reply-body-text.txt');
+				$reply_text = str_replace("%TITLE%", options::get('theme.rocket.company'), $reply_text);
+				$reply_text = str_replace("%SUBJECT%", $inputs['subject'], $reply_text);
+				$reply_text = str_replace("%TEXT%", nl2br($inputs['text']), $reply_text);
+				$reply_text = str_replace("%signing%", options::get("siging.email"), $reply_text);
+				echo($reply_text);
+				exit();
 				$user = user::byId(authentication::getID());
 				$fullname = $user->name." ".$user->lastname;
-				$result = EMAIL::send($user->id, $inputs['subject'], nl2br($inputs['text']), $letter->email, $fullname, $inputs['email']->address);
+				$result = EMAIL::send($user->id, $inputs['subject'], $reply_text, $letter->email, $fullname, $inputs['email']->address);
 				$reply = new reply;
 				$reply->sender = $user->id;
 				$reply->email = $inputs['email']->id;

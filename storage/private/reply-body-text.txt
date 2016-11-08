@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>
+		%TITLE%
+	</title>
+	<style type="text/css">
+	a:hover { text-decoration: none !important; }
+	.header h1 {color: #47c8db !important; font: bold 32px Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 40px;}
+	.header p {color: #c6c6c6; font: normal 12px Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 18px;}
+
+	.content h2 {color:#646464 !important; font-weight: bold; margin: 0; padding: 0; line-height: 26px; font-size: 18px; font-family: Helvetica, Arial, sans-serif;  }
+	.content p {color:#767676; font-weight: normal; margin: 0; padding: 0; line-height: 20px; font-size: 12px;font-family: Helvetica, Arial, sans-serif;}
+	.content a {color: #0eb6ce; text-decoration: none;}
+	.footer p {font-size: 11px; color:#7d7a7a; margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif;}
+	.footer a {color: #0eb6ce; text-decoration: none;}
+	</style>
+</head>
+<body style="margin: 0; padding: 0; background: #4b4b4b; direction: rtl;" bgcolor="#4b4b4b">
+	<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="padding: 35px 0; background: #4b4b4b">
+		<tr>
+			<td align="center" style="margin: 0; padding: 0;">
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="font-family: Helvetica, Arial, sans-serif; background:#2a2a2a;" class="header">
+					<tr>
+						<td width="20" style="font-size: 0px;">&nbsp;</td>
+						<td width="580" align="right" style="padding: 18px 0 10px;">
+							<h1 style="color: #47c8db !important; font: bold 32px Helvetica, Arial, sans-serif; margin: 0; padding: 0; line-height: 40px; padding-right: 10px;">
+								<singleline label="Title">%TITLE%</singleline>
+							</h1>
+						</td>
+					</tr>
+				</table>
+				<!-- header-->
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="font-family: Helvetica, Arial, sans-serif; background: #fff;" bgcolor="#fff">
+
+					<tr>
+						<td width="600" valign="top" align="right" style="font-family: Helvetica, Arial, sans-serif; padding: 20px 0 0;" class="content">
+							<table cellpadding="0" cellspacing="0" border="0" style="color: #717171; font: normal 11px Helvetica, Arial, sans-serif; margin: 0; padding: 0;" width="600">
+								<tr>
+									<td style="padding: 0;  font-family: Helvetica, Arial, sans-serif; no-repeat right top; height:20px; line-height: 20px;" align="center" width="558" height="20">
+										<h3 style="color:#666; font-weight: bold; text-transform: uppercase; margin: 0; padding: 0; line-height: 10px; font-size: 10px;"><currentdayname /> <currentday /> <currentmonthname /></h3>
+									</td>
+								</tr>
+							</table>
+							<repeater>
+								<table cellpadding="0" cellspacing="0" border="0" style="color: #717171; font: normal 11px Helvetica, Arial, sans-serif; margin: 0; padding: 0;" width="600">
+									<tr>
+										<td style="padding: 20px 0 0;" align="right">
+											<h2 style="color:#646464 !important; font-weight: bold; margin: 0 0 15px 0; padding: 0; line-height: 26px; font-size: 18px; font-family: Helvetica, Arial, sans-serif; padding-right: 10px;">
+												<singleline label="Title">%SUBJECT%</singleline>
+											</h2>
+											<img width="300" style="border: 1px solid #e9e9e9;" align="right" editable="true" label="Image" />
+											<p style="padding-right: 20px; padding-top: 10px;">
+												<multiline label="Description">%TEXT%</multiline>
+											</p>
+											<br />
+										</td>
+									</tr>
+								</table>
+							</repeater>
+							<br />
+						</td>
+					</tr>
+				</table><!-- body -->
+				<br /><table cellpadding="0" cellspacing="0" border="0" align="center" width="600" style="font-family: Helvetica, Arial, sans-serif; line-height: 10px;" class="footer">
+					<tr>
+						<td align="center" style="padding: 5px 0 10px; font-size: 11px; color:#7d7a7a; margin: 0; line-height: 1.2;font-family: Helvetica, Arial, sans-serif;" valign="top">
+							<p style="font-size: 11px; color:#7d7a7a; margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif;"><singleline label="Title">
+								%signing%
+							</singleline>
+							</p>
+						</td>
+					</tr>
+				</table><!-- footer-->
+			</td>
+
+		</tr>
+	</table>
+</body>
+</html>
