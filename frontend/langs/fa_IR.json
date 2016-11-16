@@ -24,6 +24,9 @@
 		"lastYear":" سال پیش",
 		"usertype.permissions.contactus_list":"لیست پیام های تماس با ما",
 		"usertype.permissions.contactus_view":"مشاهده پیام های تماس با ما",
-		"usertype.permissions.contactus_delete":"حذف پیام های تماس با ما"
+		"usertype.permissions.contactus_delete":"حذف پیام های تماس با ما",
+		"shortcut.contactus.title": "نامه های کاربران",
+		"shortcut.contactus.text": "نامه های کاربران را بخوانید و به آن ها پاسخ بدهید.",
+		"shortcut.contactus.link": "لیست پیام ها"
 	}
 }

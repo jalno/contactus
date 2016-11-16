@@ -11,6 +11,10 @@
 		{
 			"classes":["views\\contactus\\panel\\view"],
 			"file":"views/panel/view.php"
+		},
+		{
+			"classes":["listeners\\contactus\\dashboard"],
+			"file":"listeners/clipone/dashboard.php"
 		}
 	]
 }

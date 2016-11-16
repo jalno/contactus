@@ -12,6 +12,12 @@
 	},
 	"assets":[
 	],
+	"events": [
+		{
+			"name":"\\themes\\clipone\\events\\initializeDashboard",
+			"listener": "listeners\\contactus\\dashboard@initialize"
+		}
+	],
 	"views":[
 		{
 			"name":"\\themes\\clipone\\views\\contactus\\panel\\listview",
