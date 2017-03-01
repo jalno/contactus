@@ -28,32 +28,40 @@
 			"file":"libraries/users/authorization.php"
 		},
 		{
-			"classes":["controllers\\panel\\homepage"],
-			"file":"controllers/panel.php"
+			"classes":["controllers\\panel\\letters"],
+			"file":"controllers/letters.php"
 		},
 		{
 			"classes":["letter"],
-			"file":"libraries/contact.letters.php"
+			"file":"libraries/letters/letter.php"
 		},
 		{
 			"classes":["letter\\reply"],
-			"file":"libraries/contact.letters.reply.php"
+			"file":"libraries/letters/reply.php"
 		},
 		{
-			"classes":["views\\panel\\listview"],
-			"file":"views/panel/list.php"
+			"classes":["views\\panel\\letter\\search"],
+			"file":"views/panel/letter/search.php"
 		},
 		{
-			"classes":["views\\panel\\delete"],
-			"file":"views/panel/delete.php"
+			"classes":["views\\panel\\letter\\delete"],
+			"file":"views/panel/letter/delete.php"
 		},
 		{
-			"classes":["views\\panel\\view"],
-			"file":"views/panel/view.php"
+			"classes":["views\\panel\\letter\\view"],
+			"file":"views/panel/letter/view.php"
 		},
 		{
 			"classes":["listeners\\settings\\usertype"],
 			"file":"listeners/settings/usertype.php"
+		},
+		{
+			"classes":["listeners\\email"],
+			"file":"listeners/email.php"
+		},
+		{
+			"classes":["listeners\\search"],
+			"file":"listeners/search.php"
 		}
 	]
 }

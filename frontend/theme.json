@@ -20,19 +20,19 @@
 	],
 	"views":[
 		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\listview",
-			"parent":"\\packages\\contactus\\views\\panel\\listview",
-			"file":"contactus.letters.list.php"
+			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\search",
+			"parent":"\\packages\\contactus\\views\\panel\\letter\\search",
+			"file":"html/letter/search_list.php"
 		},
 		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\delete",
-			"parent":"\\packages\\contactus\\views\\panel\\delete",
-			"file":"contactus.letters.delete.php"
+			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\delete",
+			"parent":"\\packages\\contactus\\views\\panel\\letter\\delete",
+			"file":"html/letter/delete.php"
 		},
 		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\view",
-			"parent":"\\packages\\contactus\\views\\panel\\view",
-			"file":"contactus.letters.view.php"
+			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\view",
+			"parent":"\\packages\\contactus\\views\\panel\\letter\\view",
+			"file":"html/letter/view.php"
 		}
 	]
 }

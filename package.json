@@ -4,10 +4,21 @@
 	"frontend":"frontend",
 	"autoload":"autoloader.json",
 	"dependencies": ["base", "userpanel"],
+	"languages":{
+		"fa_IR": "langs/fa_IR.json"
+	},
 	"events": [
 		{
 			"name":"\\packages\\userpanel\\events\\usertype_permissions_list",
 			"listener": "listeners\\settings\\usertype@permissions_list"
+		},
+		{
+			"name":"\\packages\\email\\events\\templates",
+			"listener": "listeners\\email@templates"
+		},
+		{
+			"name":"\\packages\\userpanel\\events\\search",
+			"listener": "listeners\\search@find"
 		}
 	]
 }

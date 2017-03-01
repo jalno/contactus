@@ -4,9 +4,9 @@ use \packages\userpanel\usertype\permissions;
 class usertype{
 	public function permissions_list(){
 		$permissions = array(
-			'list',
-			'delete',
-			'view'
+			'letter_search',
+			'letter_delete',
+			'letter_view'
 
 		);
 		foreach($permissions as $permission){

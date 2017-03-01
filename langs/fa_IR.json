@@ -1,0 +1,15 @@
+{
+	"author": {
+		"name" : "Mahdi Abedi",
+		"website" : "http://mhdabedi.tk/"
+	},
+	"rtl": true,
+	"phrases":{
+		"contactus.letter.bySenderNameAndEmail": "پیام دریافت شده از {senderName} <{senderEmail}>",
+		"contactus.letter.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}",
+		"contactus.letter.reply": "پاسخ پیام {subject}",
+		"contactus.letter.replied.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}"
+
+
+	}
+}

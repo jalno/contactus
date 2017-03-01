@@ -1,16 +1,16 @@
 {
 	"files":[
 		{
-			"classes":["views\\contactus\\panel\\listview"],
-			"file":"views/panel/list.php"
+			"classes":["views\\contactus\\panel\\letter\\search"],
+			"file":"views/panel/letter/search.php"
 		},
 		{
-			"classes":["views\\contactus\\panel\\delete"],
-			"file":"views/panel/delete.php"
+			"classes":["views\\contactus\\panel\\letter\\delete"],
+			"file":"views/panel/letter/delete.php"
 		},
 		{
-			"classes":["views\\contactus\\panel\\view"],
-			"file":"views/panel/view.php"
+			"classes":["views\\contactus\\panel\\letter\\view"],
+			"file":"views/panel/letter/view.php"
 		},
 		{
 			"classes":["listeners\\contactus\\dashboard"],

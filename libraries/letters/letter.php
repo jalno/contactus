@@ -2,6 +2,7 @@
 namespace packages\contactus;
 use \packages\base\db;
 use \packages\base\db\dbObject;
+use \packages\contactus\letter\reply;
 
 class letter extends dbObject{
 	const unread = 1;
@@ -10,7 +11,6 @@ class letter extends dbObject{
 	protected $dbTable = "contactus_letter";
 	protected $primaryKey = "id";
 	protected $dbFields = array(
-		'reply' => array('type' => 'int'),
 		'date' => array('type' => 'int', 'required' => true),
         'ip' => array('type' => 'text', 'required' => true),
         'name' => array('type' => 'text', 'required' => true),
@@ -28,13 +28,7 @@ class letter extends dbObject{
 		}
 		return $data;
 	}
-	protected $relations = array(
-		'reply' => array('hasOne', 'packages\\contactus\\letter\\reply', 'reply')
-	);
-	public function delete(){
-		if($this->reply){
-			$this->reply->delete();
-		}
-		parent::delete();
+	public function getReply(){
+		return reply::where("letter", $this->id)->getOne();
 	}
 }
