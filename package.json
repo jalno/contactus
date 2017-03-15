@@ -3,7 +3,7 @@
 	"routing": "routing.json",
 	"frontend":"frontend",
 	"autoload":"autoloader.json",
-	"dependencies": ["base", "userpanel"],
+	"dependencies": ["base", "userpanel", "email"],
 	"languages":{
 		"fa_IR": "langs/fa_IR.json"
 	},
