@@ -5,5 +5,6 @@ use \packages\contactus\events as contactusEevents;
 class notifications{
 	public function events(events $events){
 		$events->add(contactusEevents\letters\receive::class);
+		$events->add(contactusEevents\letters\reply::class);
 	}
 }

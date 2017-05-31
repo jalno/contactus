@@ -25,6 +25,7 @@ use \packages\email\sender\address;
 use \packages\contactus\authorization;
 use \packages\contactus\letter;
 use \packages\contactus\letter\reply;
+use \packages\contactus\events;
 
 class letters extends controller{
 	protected $authentication = true;
@@ -206,6 +207,8 @@ class letters extends controller{
 				$letter->reply = $reply->id;
 				$letter->status = letter::answered;
 				$letter->save();
+				$event = new events\letters\reply($reply);
+				$event->trigger();
 				$this->response->setStatus(true);
 				$this->response->Go(userpanel\url("contactus/view/".$letter->id));
 			}catch(inputValidation $error){
