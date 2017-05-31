@@ -66,6 +66,10 @@
 		{
 			"classes":["listeners\\notifications"],
 			"file":"listeners/notifications.php"
+		},
+		{
+			"classes":["events\\letters\\receive"],
+			"file":"libraries/events/letters/receive.php"
 		}
 	]
 }
