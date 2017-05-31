@@ -62,6 +62,18 @@
 		{
 			"classes":["listeners\\search"],
 			"file":"listeners/search.php"
+		},
+		{
+			"classes":["listeners\\notifications"],
+			"file":"listeners/notifications.php"
+		},
+		{
+			"classes":["events\\letters\\receive"],
+			"file":"libraries/events/letters/receive.php"
+		},
+		{
+			"classes":["events\\letters\\reply"],
+			"file":"libraries/events/letters/reply.php"
 		}
 	]
 }
