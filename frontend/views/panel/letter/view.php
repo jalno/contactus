@@ -21,13 +21,13 @@ class view extends letter_view{
 			translator::trans('contactus'),
 			$this->letter->subject
 		));
+		$this->addBodyClass('contactus_letter_view');
 		$this->addAssets();
 		navigation::active("contactus");
 	}
 	private function addAssets(){
 		if(!$this->letter->reply){
 			$this->addJSFile(theme::url('assets/plugins/ckeditor/ckeditor.js'));
-			$this->addCSSFile(theme::url('assets/css/pages/reply.css'));
 		}
 	}
 	protected function getAddressesForSelect(){
