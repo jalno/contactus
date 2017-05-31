@@ -1,15 +1,13 @@
 <?php
 namespace themes\clipone\views\contactus\panel\letter;
 use \packages\base\translator;
-
+use \packages\base\view\error;
 use \packages\userpanel;
-
 use \themes\clipone\viewTrait;
 use \themes\clipone\navigation;
 use \themes\clipone\views\listTrait;
 use \themes\clipone\views\formTrait;
 use \themes\clipone\navigation\menuItem;
-
 use \packages\contactus\letter;
 use \packages\contactus\views\panel\letter\search as search_list;
 
@@ -22,6 +20,15 @@ class search extends search_list{
 		));
 		navigation::active("contactus");
 		$this->setButtons();
+		if(empty($this->getLetters())){
+			$this->addNotFoundError();
+		}
+	}
+	private function addNotFoundError(){
+		$error = new error();
+		$error->setType(error::NOTICE);
+		$error->setCode('contactus.letter.notfound');
+		$this->addError($error);
 	}
 	public static function onSourceLoad(){
 		parent::onSourceLoad();

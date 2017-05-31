@@ -31,6 +31,7 @@
 		"usertype.permissions.contactus_letter_delete":"حذف پیام های تماس با ما",
 		"shortcut.contactus.title": "نامه های کاربران",
 		"shortcut.contactus.text": "نامه های کاربران را بخوانید و به آن ها پاسخ بدهید.",
-		"shortcut.contactus.link": "لیست پیام ها"
+		"shortcut.contactus.link": "لیست پیام ها",
+		"error.contactus.letter.notfound": "هیج پیامی یافت نشد، به محض دریافت پیام آن را در اینجا مشاهده خواهید کرد."
 	}
 }

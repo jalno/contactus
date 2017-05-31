@@ -8,9 +8,9 @@ use \themes\clipone\utility;
 use \packages\contactus\letter;
 $this->the_header();
 ?>
-<!-- start: PAGE CONTENT -->
 <div class="row">
 	<div class="col-md-12">
+	<?php if(!empty($this->getLetters())){ ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<i class="fa fa-external-link-square"></i> <?php echo translator::trans("contactus"); ?>
@@ -72,7 +72,7 @@ $this->the_header();
 				<?php $this->paginator(); ?>
 			</div>
 		</div>
-		<!-- end: BASIC TABLE PANEL -->
+	<?php } ?>
 	</div>
 </div>
 <!-- end: PAGE CONTENT-->
