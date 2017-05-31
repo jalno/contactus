@@ -11,6 +11,7 @@
 		"fa_IR" : "langs/fa_IR.json"
 	},
 	"assets":[
+		{"type":"less", "file":"assets/less/main.less"}
 	],
 	"events": [
 		{
