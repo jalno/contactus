@@ -10,7 +10,7 @@ class reply extends event implements notifiable{
 	public function __construct(letter\reply $reply){
 		$this->reply = $reply;
 	}
-	public function getReply():letter{
+	public function getReply():letter\reply{
 		return $this->reply;
 	}
 	public static function getName():string{
