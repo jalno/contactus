@@ -74,6 +74,10 @@
 		{
 			"classes":["events\\letters\\reply"],
 			"file":"libraries/events/letters/reply.php"
+		},
+		{
+			"classes":["listeners\\notice"],
+			"file":"listeners/notice.php"
 		}
 	]
 }

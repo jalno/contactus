@@ -23,6 +23,10 @@
 		{
 			"name":"\\packages\\notifications\\events",
 			"listener": "listeners\\notifications@events"
+		},
+		{
+			"name":"\\packages\\notice\\events\\views",
+			"listener": "listeners\\notice@views"
 		}
 	]
 }

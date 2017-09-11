@@ -8,8 +8,9 @@
 		"contactus.letter.bySenderNameAndEmail": "پیام دریافت شده از {senderName} <{senderEmail}>",
 		"contactus.letter.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}",
 		"contactus.letter.reply": "پاسخ پیام {subject}",
-		"contactus.letter.replied.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}"
-
-
+		"contactus.letter.replied.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}",
+		"notice.note.view.name.packages.contactus.views.panel.letter.search": "پنل کاربری -> تماس با ما",
+		"notice.note.view.name.packages.contactus.views.panel.letter.view": "پنل کاربری -> تماس با ما -> مشاهده",
+		"notice.note.view.name.packages.contactus.views.panel.letter.delete": "پنل کاربری -> تماس با ما -> حذف"
 	}
 }
