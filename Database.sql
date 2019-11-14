@@ -1,7 +1,3 @@
-/*
-*	ContactUS
-*	https://git.jeyserver.com/abedi/contactus
-*/
 
 CREATE TABLE `contactus_letter` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
