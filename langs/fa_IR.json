@@ -5,6 +5,13 @@
 	},
 	"rtl": true,
 	"phrases":{
+		"usertype.permissions.contactus": "تماس با ما",
+		"usertype.permissions.contactus_letter": "پیام های تماس با ما",
+		"usertype.permissions.contactus_letter_search":"لیست پیام های تماس با ما",
+		"usertype.permissions.contactus_letter_view":"مشاهده پیام های تماس با ما",
+		"usertype.permissions.contactus_letter_delete":"حذف پیام های تماس با ما",
+
+
 		"contactus.letter.bySenderNameAndEmail": "پیام دریافت شده از {senderName} <{senderEmail}>",
 		"contactus.letter.description": "دریافت شده در {receive_at} ، عنوان : {subject} ، متن: {text}",
 		"contactus.letter.reply": "پاسخ پیام {subject}",
