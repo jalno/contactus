@@ -1,3 +1,7 @@
 <?php
+
 namespace packages\contactus\Controllers\Panel;
-class EmailNotSent extends \Exception{}
+
+class EmailNotSent extends \Exception
+{
+}
