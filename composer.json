@@ -1,0 +1,19 @@
+{
+    "name": "jalno/contactus",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "jalno/base": "@dev",
+        "jalno/userpanel": "@dev",
+        "jalno/email" :"@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "packages\\contactus\\": ["libraries/"],
+            "themes\\clipone\\Listeners\\" : ["frontend/Listeners"],
+            "themes\\clipone\\Views\\Contactus\\" :["frontend/Views"]
+        }
+    }
+}
