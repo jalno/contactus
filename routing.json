@@ -1,15 +1,15 @@
 [
 	{
-		"path": ["userpanel", "contactus"],
-		"controller": "controllers\\panel\\letters@search",
+		"path": "userpanel/contactus",
+		"controller": "packages/contactus/Controllers/Panel/Letters@search",
 		"method": "get"
 	},
 	{
 		"path": ["userpanel", "contactus", "delete", {"type":"dynamic", "name":"id", "regex":"/^(\\d+)$/"}],
-		"controller": "controllers\\panel\\letters@delete"
+		"controller": "packages/contactus/Controllers/Panel/Letters@delete"
 	},
 	{
 		"path": ["userpanel", "contactus", "view", {"type":"dynamic", "name":"letter", "regex":"/^(\\d+)$/"}],
-		"controller": "controllers\\panel\\letters@view"
+		"controller": "packages/contactus/Controllers/Panel/Letters@view"
 	}
 ]

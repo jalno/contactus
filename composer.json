@@ -12,8 +12,13 @@
     "autoload": {
         "psr-4": {
             "packages\\contactus\\": ["libraries/"],
-            "themes\\clipone\\Listeners\\" : ["frontend/Listeners"],
-            "themes\\clipone\\Views\\Contactus\\" :["frontend/Views"]
+            "themes\\clipone\\Listeners\\" : ["frontend/Listeners/"],
+            "themes\\clipone\\Views\\Contactus\\" :["frontend/Views/"]
+        }
+    },
+    "extra": {
+        "jalno": {
+            "manifest": "package.json"
         }
     }
 }

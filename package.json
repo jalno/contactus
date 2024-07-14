@@ -3,31 +3,30 @@
 	"routing": "routing.json",
 	"frontend":"frontend",
 	"autoload":"autoloader.json",
-	"dependencies": ["base", "userpanel", "email"],
 	"languages":{
 		"fa_IR": "langs/fa_IR.json",
 		"en_US": "langs/en_US.json"
 	},
 	"events": [
 		{
-			"name":"\\packages\\userpanel\\events\\usertype_permissions_list",
-			"listener": "listeners\\settings\\usertype@permissions_list"
+			"name":"packages/userpanel/Events/UserTypePermissionsList",
+			"listener": "packages/contactus/Settings/UserType@permissions_list"
 		},
 		{
-			"name":"\\packages\\email\\events\\templates",
-			"listener": "listeners\\email@templates"
+			"name":"packages/email/Events/Templates",
+			"listener": "packages/contactus/Listeners/Email@templates"
 		},
 		{
-			"name":"\\packages\\userpanel\\events\\search",
-			"listener": "listeners\\search@find"
+			"name":"packages/userpanel/Events/Search",
+			"listener": "packages/contactus/Listeners/Search@find"
 		},
 		{
-			"name":"\\packages\\notifications\\events",
-			"listener": "listeners\\notifications@events"
+			"name":"packages/notifications/Events",
+			"listener": "packages/contactus/Listeners/Notifications@events"
 		},
 		{
-			"name":"\\packages\\notice\\events\\views",
-			"listener": "listeners\\notice@views"
+			"name":"packages/notice/Events/Views",
+			"listener": "packages/contactus/Listeners/Notice@views"
 		}
 	]
 }
