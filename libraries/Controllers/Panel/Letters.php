@@ -13,7 +13,7 @@ use packages\contactus\Authorization;
 use packages\contactus\Events;
 use packages\contactus\Letter;
 use packages\contactus\Letter\Reply;
-use packages\contactus\Views\Panel\Letter as LetterView;
+use themes\clipone\Views\Contactus\Panel\Letter as Views;
 use packages\email\API;
 use packages\email\Sender;
 use packages\email\Sender\Address;
@@ -30,7 +30,7 @@ class Letters extends Controller
     public function search()
     {
         Authorization::haveOrFail('letter_search');
-        $view = View::byName(LetterView\Search::class);
+        $view = View::byName(Views\Search::class);
         $letter = new Letter();
         $letter->orderBy('date', 'DESC');
         $inputsRules = [
@@ -106,7 +106,7 @@ class Letters extends Controller
         if (!$letter) {
             throw new NotFound();
         }
-        $view = View::byName(LetterView\Delete::class);
+        $view = View::byName(Views\Delete::class);
         $view->setLetter($letter);
         $this->response->setStatus(false);
         if (HTTP::is_post()) {
@@ -132,7 +132,7 @@ class Letters extends Controller
         if (!$letter) {
             throw new NotFound();
         }
-        $view = View::byName(LetterView\View::class);
+        $view = View::byName(Views\View::class);
         $view->setLetter($letter);
         DB::join('email_senders', 'email_senders_addresses.sender=email_senders.id', 'inner');
         DB::where('email_senders.status', Sender::active);
