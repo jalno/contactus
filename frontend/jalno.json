@@ -6,7 +6,6 @@
 		"name" : "Abedi",
 		"website" : "http://www.software-iaun.ir/"
 	},
-	"autoload":"autoloader.json",
 	"languages":{
 		"fa_IR" : "langs/fa_IR.json"
 	},
@@ -15,25 +14,8 @@
 	],
 	"events": [
 		{
-			"name":"\\themes\\clipone\\events\\initializeDashboard",
-			"listener": "listeners\\contactus\\dashboard@initialize"
-		}
-	],
-	"views":[
-		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\search",
-			"parent":"\\packages\\contactus\\views\\panel\\letter\\search",
-			"file":"html/letter/search_list.php"
-		},
-		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\delete",
-			"parent":"\\packages\\contactus\\views\\panel\\letter\\delete",
-			"file":"html/letter/delete.php"
-		},
-		{
-			"name":"\\themes\\clipone\\views\\contactus\\panel\\letter\\view",
-			"parent":"\\packages\\contactus\\views\\panel\\letter\\view",
-			"file":"html/letter/view.php"
+			"name":"themes/clipone/Events/InitializeDashboard",
+			"listener": "packages/contactus/Listeners/Contactus/Dashboard@initialize"
 		}
 	]
 }
