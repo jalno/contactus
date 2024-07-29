@@ -4,6 +4,9 @@ namespace packages\contactus\Letter;
 
 use packages\base\DB\DBObject;
 use packages\userpanel\Date;
+use packages\userpanel\User;
+use packages\contactus\Letter;
+use packages\email\Sender\Address;
 
 class Reply extends DBObject
 {
@@ -19,9 +22,9 @@ class Reply extends DBObject
         'text' => ['type' => 'text', 'required' => true],
     ];
     protected $relations = [
-        'sender' => ['hasOne', \packages\userpanel\User::class, 'sender'],
-        'letter' => ['hasOne', \packages\contactus\Letter::class, 'letter'],
-        'email' => ['hasOne', \packages\email\Sender\Address::class, 'email'],
+        'sender' => ['hasOne', User::class, 'sender'],
+        'letter' => ['hasOne', Letter::class, 'letter'],
+        'email' => ['hasOne', Address::class, 'email'],
     ];
 
     protected function preLoad($data)

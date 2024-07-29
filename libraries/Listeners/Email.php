@@ -4,6 +4,7 @@ namespace packages\contactus\Listeners;
 
 use packages\email\Events\Templates;
 use packages\email\Template;
+use packages\contactus\Letter\Reply;
 
 class Email
 {
@@ -16,7 +17,7 @@ class Email
     {
         $template = new Template();
         $template->name = 'contactus_letter_reply';
-        $template->addVariable(\packages\contactus\Letter\Reply::class);
+        $template->addVariable(Reply::class);
         $template->addVariable('reply->letter->html');
 
         return $template;
