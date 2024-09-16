@@ -11,7 +11,6 @@ class Search extends ListView
     use FormTrait;
     protected $canView;
     protected $canDel;
-    protected static $navigation;
 
     public function __construct()
     {
@@ -22,10 +21,5 @@ class Search extends ListView
     public function getLetters()
     {
         return $this->dataList;
-    }
-
-    public static function onSourceLoad()
-    {
-        self::$navigation = Authorization::is_accessed('letter_search');
     }
 }

@@ -2,13 +2,10 @@
 
 namespace themes\clipone\Views\Contactus\Panel\Letter;
 
-use packages\base\Translator;
 use packages\base\View\Error;
 use packages\contactus\Letter;
 use packages\contactus\Views\Panel\Letter\Search as SearchList;
-use packages\userpanel;
 use themes\clipone\Navigation;
-use themes\clipone\Navigation\MenuItem;
 use themes\clipone\Views\FormTrait;
 use themes\clipone\Views\ListTrait;
 use themes\clipone\ViewTrait;
@@ -38,18 +35,6 @@ class Search extends SearchList
         $error->setType(Error::NOTICE);
         $error->setCode('contactus.letter.notfound');
         $this->addError($error);
-    }
-
-    public static function onSourceLoad()
-    {
-        parent::onSourceLoad();
-        if (self::$navigation) {
-            $item = new MenuItem('contactus');
-            $item->setTitle(t('contactus'));
-            $item->setURL(userpanel\url('contactus'));
-            $item->setIcon('fa fa-envelope');
-            Navigation::addItem($item);
-        }
     }
 
     public function setButtons()
