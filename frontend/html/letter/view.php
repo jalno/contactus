@@ -53,7 +53,7 @@ $this->the_header();
 				</div>
 				<?php } else { ?>
 				<div class="replaycontianer">
-					<h3 style="font-family: b;"><?php echo Translator::trans('send.reply'); ?></h3>
+					<h3 style="font-family: b;"><?php echo t('send.reply'); ?></h3>
 					<form action="<?php echo userpanel\url('contactus/view/'.$this->letter->id); ?>" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-md-6">
@@ -77,14 +77,14 @@ $this->the_header();
 								    'type' => 'textarea',
 								    'name' => 'html',
 								    'class' => 'form-control ckeditor',
-								    'label' => Translator::trans('email.text'),
+								    'label' => t('email.text'),
 								]); ?>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-4 col-md-offset-4">
 								<div class="btn-group col-xs-12">
-									<button type="submit" class="btn btn-success col-xs-10"><i class="fa fa-paper-plane"></i> <?php echo Translator::trans('send'); ?></button>
+									<button type="submit" class="btn btn-success col-xs-10"><i class="fa fa-paper-plane"></i> <?php echo t('send'); ?></button>
 									<span class="btn btn-file  btn-success  col-xs-2">
 										<i class="fa fa-paperclip"></i>
 										<input type="file" name="attachments[]" multiple="mutliple">

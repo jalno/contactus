@@ -1,0 +1,14 @@
+{
+  "usertype.permissions.contactus": "ContactUs",
+  "usertype.permissions.contactus_letter": "ContactUs Letter",
+  "usertype.permissions.contactus_letter_search": "ContactUS Letters List",
+  "usertype.permissions.contactus_letter_view": "View ContactUS Letter",
+  "usertype.permissions.contactus_letter_delete": "Delete ContactUs Letter",
+  "contactus.letter.bySenderNameAndEmail": "Received message from {senderName} <{senderEmail}>",
+  "contactus.letter.description": "Received at {receive_at} ، Title : {subject} ، Text: {text}",
+  "contactus.letter.reply": "Reply letter {subject}",
+  "contactus.letter.replied.description": "Received at {receive_at} ، title : {subject} ، text: {text}",
+  "notice.note.view.name.packages.contactus.views.panel.letter.search": "Userpanel -> ContactUs",
+  "notice.note.view.name.packages.contactus.views.panel.letter.view": "Userpanel -> ContactUs -> View Letter",
+  "notice.note.view.name.packages.contactus.views.panel.letter.delete": "Userpanel -> ContactUs -> Delete Letter"
+}

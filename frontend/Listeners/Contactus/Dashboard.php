@@ -2,7 +2,6 @@
 
 namespace themes\clipone\Listeners\Contactus;
 
-use packages\base\Translator;
 use packages\contactus\Authorization;
 use packages\contactus\Letter;
 use packages\userpanel;
@@ -27,10 +26,10 @@ class Dashboard
         $shortcut->icon = 'fa fa-envelope';
         if ($letters) {
             $shortcut->title = $letters;
-            $shortcut->text = Translator::trans('shortcut.contactus.unread.letter');
-            $shortcut->setLink(Translator::trans('shortcut.contactus.link'), userpanel\url('contactus'));
+            $shortcut->text = t('shortcut.contactus.unread.letter');
+            $shortcut->setLink(t('shortcut.contactus.link'), userpanel\url('contactus'));
         } else {
-            $shortcut->text = Translator::trans('shortcut.contactus.unread.letter.iszero');
+            $shortcut->text = t('shortcut.contactus.unread.letter.iszero');
         }
         View::addShortcut($shortcut);
     }

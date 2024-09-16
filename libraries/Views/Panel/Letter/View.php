@@ -12,7 +12,7 @@ class View extends Form
     {
         $this->setData($letter, 'letter');
         $this->setDataForm($letter->toArray());
-        $this->setDataForm(Translator::trans('letter.subject.reply', ['letter_subject' => $letter->subject]), 'subject');
+        $this->setDataForm(t('letter.subject.reply', ['letter_subject' => $letter->subject]), 'subject');
     }
 
     public function getLetter()

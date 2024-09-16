@@ -36,11 +36,11 @@ class Search
         foreach ($letters as $letter) {
             $result = new Link();
             $result->setLink(userpanel\url('contactus/view/'.$letter->id));
-            $result->setTitle(Translator::trans('contactus.letter.bySenderNameAndEmail', [
+            $result->setTitle(t('contactus.letter.bySenderNameAndEmail', [
                 'senderName' => $letter->name,
                 'senderEmail' => $letter->email,
             ]));
-            $result->setDescription(Translator::trans('contactus.letter.description', [
+            $result->setDescription(t('contactus.letter.description', [
                 'receive_at' => Date::format('Y/m/d H:i:s', $letter->date),
                 'text' => mb_substr($letter->text, 0, 70),
                 'subject' => mb_substr($letter->subject, 0, 30),
@@ -64,10 +64,10 @@ class Search
         foreach ($letterReplies as $reply) {
             $result = new Link();
             $result->setLink(userpanel\url('contactus/view/'.$reply->letter->id));
-            $result->setTitle(Translator::trans('contactus.letter.reply', [
+            $result->setTitle(t('contactus.letter.reply', [
                 'subject' => $reply->letter->subject,
             ]));
-            $result->setDescription(Translator::trans('contactus.letter.replied.description', [
+            $result->setDescription(t('contactus.letter.replied.description', [
                 'receive_at' => Date::format('Y/m/d H:i:s', $reply->letter->date),
                 'text' => mb_substr($reply->letter->text, 0, 70),
                 'subject' => mb_substr($reply->letter->subject, 0, 30),

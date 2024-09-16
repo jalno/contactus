@@ -2,12 +2,8 @@
 	"name" : "clipone",
 	"title":"Clip One",
 	"version" : "1.0.0",
-	"author" : {
-		"name" : "Abedi",
-		"website" : "http://www.software-iaun.ir/"
-	},
 	"languages":{
-		"fa_IR" : "langs/fa_IR.json"
+		"fa" : "langs/fa.json"
 	},
 	"assets":[
 		{"type":"less", "file":"assets/less/main.less"}
@@ -15,7 +11,7 @@
 	"events": [
 		{
 			"name":"themes/clipone/Events/InitializeDashboard",
-			"listener": "packages/contactus/Listeners/Contactus/Dashboard@initialize"
+			"listener": "themes/clipone/Listeners/Contactus/Dashboard@initialize"
 		}
 	]
 }

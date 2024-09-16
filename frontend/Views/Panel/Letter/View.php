@@ -20,7 +20,7 @@ class View extends LetterView
     {
         $this->letter = $this->getLetter();
         $this->setTitle([
-            Translator::trans('contactus'),
+            t('contactus'),
             $this->letter->subject,
         ]);
         $this->addBodyClass('contactus_letter_view');
@@ -52,19 +52,19 @@ class View extends LetterView
     {
         $date = Date::time() - $time;
         if (0 == $date) {
-            $sent_at = Translator::trans('contactus.letter.replied.in.just.now');
+            $sent_at = t('contactus.letter.replied.in.just.now');
         } elseif ($date < 60) {
-            $sent_at = $date.Translator::trans('contactus.letter.replied.in.lastSec');
+            $sent_at = $date.t('contactus.letter.replied.in.lastSec');
         } elseif ($date >= 60 and $date < 3600) {
-            $sent_at = floor($date / 60).Translator::trans('contactus.letter.replied.in.lastMin');
+            $sent_at = floor($date / 60).t('contactus.letter.replied.in.lastMin');
         } elseif ($date >= 3600 and $date < 86400) {
-            $sent_at = floor($date / 3600).Translator::trans('contactus.letter.replied.in.lastHov');
+            $sent_at = floor($date / 3600).t('contactus.letter.replied.in.lastHov');
         } elseif ($date >= 86400 and $date < 2592000) {
-            $sent_at = floor($date / 86400).Translator::trans('contactus.letter.replied.in.lastDay');
+            $sent_at = floor($date / 86400).t('contactus.letter.replied.in.lastDay');
         } elseif (2592000 >= 2592000 and $date < 31104000) {
-            $sent_at = floor($date / 2592000).Translator::trans('contactus.letter.replied.in.lastMonth');
+            $sent_at = floor($date / 2592000).t('contactus.letter.replied.in.lastMonth');
         } elseif ($date >= 31104000) {
-            $sent_at = floor($date / 31104000).Translator::trans('contactus.letter.replied.in.lastYear');
+            $sent_at = floor($date / 31104000).t('contactus.letter.replied.in.lastYear');
         }
 
         return $sent_at;

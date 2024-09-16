@@ -22,8 +22,8 @@ class Search extends SearchList
     public function __beforeLoad()
     {
         $this->setTitle([
-            Translator::trans('contactus'),
-            Translator::trans('list'),
+            t('contactus'),
+            t('list'),
         ]);
         Navigation::active('contactus');
         $this->setButtons();
@@ -45,7 +45,7 @@ class Search extends SearchList
         parent::onSourceLoad();
         if (self::$navigation) {
             $item = new MenuItem('contactus');
-            $item->setTitle(Translator::trans('contactus'));
+            $item->setTitle(t('contactus'));
             $item->setURL(userpanel\url('contactus'));
             $item->setIcon('fa fa-envelope');
             Navigation::addItem($item);
@@ -55,12 +55,12 @@ class Search extends SearchList
     public function setButtons()
     {
         $this->setButton('view', $this->canView, [
-            'title' => Translator::trans('view'),
+            'title' => t('view'),
             'icon' => 'fa fa-files-o',
             'classes' => ['btn', 'btn-xs', 'btn-green'],
         ]);
         $this->setButton('delete', $this->canDel, [
-            'title' => Translator::trans('delete'),
+            'title' => t('delete'),
             'icon' => 'fa fa-times',
             'classes' => ['btn', 'btn-xs', 'btn-bricky'],
         ]);
@@ -70,15 +70,15 @@ class Search extends SearchList
     {
         return [
             [
-                'title' => Translator::trans('search.comparison.contains'),
+                'title' => t('search.comparison.contains'),
                 'value' => 'contains',
             ],
             [
-                'title' => Translator::trans('search.comparison.equals'),
+                'title' => t('search.comparison.equals'),
                 'value' => 'equals',
             ],
             [
-                'title' => Translator::trans('search.comparison.startswith'),
+                'title' => t('search.comparison.startswith'),
                 'value' => 'startswith',
             ],
         ];
@@ -88,19 +88,19 @@ class Search extends SearchList
     {
         return [
             [
-                'title' => Translator::trans('contactus.search.choose'),
+                'title' => t('contactus.search.choose'),
                 'value' => '',
             ],
             [
-                'title' => Translator::trans('contactus.letter.unread'),
+                'title' => t('contactus.letter.unread'),
                 'value' => Letter::unread,
             ],
             [
-                'title' => Translator::trans('contactus.letter.read'),
+                'title' => t('contactus.letter.read'),
                 'value' => Letter::read,
             ],
             [
-                'title' => Translator::trans('contactus.letter.answered'),
+                'title' => t('contactus.letter.answered'),
                 'value' => Letter::answered,
             ],
         ];

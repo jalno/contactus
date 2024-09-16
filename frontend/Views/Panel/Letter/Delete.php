@@ -18,8 +18,8 @@ class Delete extends LetterDelete
     {
         $this->letter = $this->getLetter();
         $this->setTitle([
-            Translator::trans('contactus'),
-            Translator::trans('letter_delete'),
+            t('contactus'),
+            t('letter_delete'),
         ]);
         Navigation::active('contactus');
     }
