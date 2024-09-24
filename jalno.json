@@ -8,7 +8,7 @@
 	"events": [
 		{
 			"name":"packages/userpanel/Events/UserTypePermissionsList",
-			"listener": "packages/contactus/Settings/UserType@permissions_list"
+			"listener": "packages/contactus/Listeners/Settings/UserType@permissions_list"
 		},
 		{
 			"name":"packages/email/Events/Templates",
