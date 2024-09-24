@@ -12,7 +12,7 @@
   "contactus.letter.answered": "پاسخ داده شده",
   "contactus.letter.specific_word": "کلمه کلیدی",
   "contactus.letter.delete.warning": "آیا از حذف پیام ارسال شده در فرم تماس با ما به شناسه #{letter_id} اطمینان دارید؟ این عملیات بدون بازگشت است",
-  "contactus.letter.subject.reply": "پاسخ: {letter_subject}",
+  "contactus.letter.subject.reply": "پاسخ: :letter_subject",
   "contactus.letter.replied.in.just.now": "همین الان",
   "contactus.letter.replied.in.lastSec": " ثانیه پیش",
   "contactus.letter.replied.in.lastMin": " دقیقه پیش",
